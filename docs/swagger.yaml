@@ -1,0 +1,104 @@
+basePath: /
+definitions:
+  models.DeleteTodoRequest:
+    properties:
+      id:
+        type: integer
+    required:
+    - id
+    type: object
+  models.Todo:
+    properties:
+      description:
+        type: string
+      id:
+        type: integer
+      status:
+        type: string
+    type: object
+  models.UpdateTodoRequest:
+    properties:
+      description:
+        type: string
+      status:
+        type: string
+    required:
+    - description
+    - status
+    type: object
+host: localhost:8081
+info:
+  contact:
+    email: volkanoluc@gmail.com
+    name: API Support
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Todo Api Example
+  version: "1.0"
+paths:
+  /create-todo:
+    post:
+      consumes:
+      - application/json
+      description: Create a todo
+      parameters:
+      - description: todo info
+        in: body
+        name: tasks
+        required: true
+        schema:
+          $ref: '#/definitions/models.Todo'
+      produces:
+      - application/json
+      summary: Create a todo
+      tags:
+      - todos
+  /delete-todo:
+    post:
+      consumes:
+      - application/json
+      description: Delete  a todo
+      parameters:
+      - description: "true"
+        in: body
+        name: tasks
+        required: true
+        schema:
+          $ref: '#/definitions/models.DeleteTodoRequest'
+      produces:
+      - application/json
+      summary: Delete  a todo
+      tags:
+      - todos
+  /todo-list:
+    get:
+      consumes:
+      - application/json
+      description: List todo list
+      produces:
+      - application/json
+      summary: List all todos
+      tags:
+      - todos
+  /update-todo:
+    post:
+      consumes:
+      - application/json
+      description: Update  a todo
+      parameters:
+      - description: todo info
+        in: body
+        name: tasks
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateTodoRequest'
+      produces:
+      - application/json
+      summary: Update   a todo
+      tags:
+      - todos
+swagger: "2.0"
+x-extension-openapi:
+  example: value on a json format

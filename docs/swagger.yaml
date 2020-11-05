@@ -5,7 +5,7 @@ definitions:
       id:
         type: integer
     required:
-    - id
+      - id
     type: object
   models.Todo:
     properties:
@@ -23,8 +23,8 @@ definitions:
       status:
         type: string
     required:
-    - description
-    - status
+      - description
+      - status
     type: object
 host: localhost:8081
 info:
@@ -41,64 +41,64 @@ paths:
   /create-todo:
     post:
       consumes:
-      - application/json
+        - application/json
       description: Create a todo
       parameters:
-      - description: todo info
-        in: body
-        name: tasks
-        required: true
-        schema:
-          $ref: '#/definitions/models.Todo'
+        - description: todo info
+          in: body
+          name: tasks
+          required: true
+          schema:
+            $ref: '#/definitions/models.Todo'
       produces:
-      - application/json
+        - application/json
       summary: Create a todo
       tags:
-      - todos
+        - todos
   /delete-todo:
     post:
       consumes:
-      - application/json
+        - application/json
       description: Delete  a todo
       parameters:
-      - description: "true"
-        in: body
-        name: tasks
-        required: true
-        schema:
-          $ref: '#/definitions/models.DeleteTodoRequest'
+        - description: "true"
+          in: body
+          name: tasks
+          required: true
+          schema:
+            $ref: '#/definitions/models.DeleteTodoRequest'
       produces:
-      - application/json
+        - application/json
       summary: Delete  a todo
       tags:
-      - todos
+        - todos
   /todo-list:
     get:
       consumes:
-      - application/json
+        - application/json
       description: List todo list
       produces:
-      - application/json
+        - application/json
       summary: List all todos
       tags:
-      - todos
+        - todos
   /update-todo:
     post:
       consumes:
-      - application/json
+        - application/json
       description: Update  a todo
       parameters:
-      - description: todo info
-        in: body
-        name: tasks
-        required: true
-        schema:
-          $ref: '#/definitions/models.UpdateTodoRequest'
+        - description: todo info
+          in: body
+          name: tasks
+          required: true
+          schema:
+            $ref: '#/definitions/models.UpdateTodoRequest'
       produces:
-      - application/json
+        - application/json
       summary: Update   a todo
       tags:
-      - todos
+        - todos
 swagger: "2.0"
 x-extension-openapi:
   example: value on a json format

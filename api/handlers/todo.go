@@ -75,7 +75,7 @@ type DeleteTodoRequest struct {
 // @Tags todos
 // @Accept  json
 // @Produce  json
-// @Param tasks body models.DeleteTodoRequest  true "true"
+// @Param tasks body DeleteTodoRequest  true "true"
 // @Router /delete-todo [post]
 func (h *Handlers) DeleteTodo(c *gin.Context) {
 	var req DeleteTodoRequest
@@ -105,7 +105,7 @@ type UpdateTodoRequest struct {
 // @Tags todos
 // @Accept  json
 // @Produce  json
-// @Param tasks body models.UpdateTodoRequest true "todo info"
+// @Param tasks body UpdateTodoRequest  true "todo info"
 // @Router /update-todo [post]
 func (h *Handlers) UpdateTodo(c *gin.Context) {
 	var req UpdateTodoRequest

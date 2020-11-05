@@ -29,7 +29,7 @@ To use this project, first clone the repo on your device using the command below
 
 ```git init```
 
-```git https://github.com/olucvolkan/todoApp```
+```git https://github.com/olucvolkan/todo-app-case```
 
 
 # Usage
@@ -38,11 +38,12 @@ To use this project, first clone the repo on your device using the command below
 ### `build`
 
 ```sh
-$ cd todoApp
-$ go build main.go
-$ go run main.go
+$ cd todo-app-case
+$ go build cmd/api/main.go
+$ go run cmd/api/main.go
 ```
 Runs the app in the development mode.<br />
+You must edit the .env file according to your own information!
 Open [http://localhost:8080/swagger/index.html](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />

@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	"github.com/olucvolkan/todoApp/api/repositories"
-	"github.com/olucvolkan/todoApp/app"
+	"github.com/olucvolkan/todo-app-case/api/repositories"
+	"github.com/olucvolkan/todo-app-case/app"
 )
 
 // Handlers holds all controller methods

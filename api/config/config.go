@@ -1,10 +1,10 @@
 package config
 
+
 import (
 	"fmt"
-	"os"
-
 	"github.com/subosito/gotenv"
+	"os"
 )
 
 // Config represents app configuration
@@ -19,15 +19,13 @@ type Config struct {
 
 // Init initialize
 func New() *Config {
-	gotenv.Load()
-
 	return &Config{
 		HTTPPort:   getEnvWithDefault("PORT", "8080"),
 		DBHost:     getEnvWithDefault("DB_HOST", "127.0.0.1"),
 		DBPort:     getEnvWithDefault("DB_PORT", "3306"),
 		DBUser:     getEnvWithDefault("DB_USER", "root"),
 		DBPassword: getEnvWithDefault("DB_PASSWORD", ""),
-		DBName:     getEnvWithDefault("DB_NAME", "todoApp"),
+		DBName:     getEnvWithDefault("DB_NAME", "todo_app"),
 	}
 }
 
@@ -55,6 +53,7 @@ func (c *Config) DBUrlWithoutDBName() string {
 }
 
 func getEnvWithDefault(key, defaultVal string) string {
+	gotenv.Load()
 	val := os.Getenv(key)
 
 	if val == "" {

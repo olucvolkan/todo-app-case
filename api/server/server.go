@@ -2,7 +2,7 @@ package server
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/olucvolkan/todoApp/api/handlers"
+	"github.com/olucvolkan/todo-app-case/api/handlers"
 )
 
 // New creates new instance of Gin and configures it

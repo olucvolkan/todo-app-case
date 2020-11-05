@@ -7,8 +7,8 @@ import (
 	"strconv"
 
 	"github.com/gin-gonic/gin"
-	"github.com/olucvolkan/todoApp/api/models"
-	"github.com/olucvolkan/todoApp/api/schema"
+	"github.com/olucvolkan/todo-app-case/api/models"
+	"github.com/olucvolkan/todo-app-case/api/schema"
 )
 
 // GetTodos godoc

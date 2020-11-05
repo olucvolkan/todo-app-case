@@ -1,8 +1,8 @@
 package repositories
 
 import (
-	"github.com/olucvolkan/todoApp/api/models"
-	"github.com/olucvolkan/todoApp/app"
+	"github.com/olucvolkan/todo-app-case/api/models"
+	"github.com/olucvolkan/todo-app-case/app"
 )
 
 // TodoRepo holds methods to interact with todo records

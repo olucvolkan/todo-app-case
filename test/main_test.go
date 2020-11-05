@@ -12,12 +12,12 @@ import (
 	"github.com/gin-gonic/gin"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
-	"github.com/olucvolkan/todoApp/api/config"
-	"github.com/olucvolkan/todoApp/api/handlers"
-	"github.com/olucvolkan/todoApp/api/models"
-	"github.com/olucvolkan/todoApp/api/repositories"
-	"github.com/olucvolkan/todoApp/api/server"
-	"github.com/olucvolkan/todoApp/app"
+	"github.com/olucvolkan/todo-app-case/api/config"
+	"github.com/olucvolkan/todo-app-case/api/handlers"
+	"github.com/olucvolkan/todo-app-case/api/models"
+	"github.com/olucvolkan/todo-app-case/api/repositories"
+	"github.com/olucvolkan/todo-app-case/api/server"
+	"github.com/olucvolkan/todo-app-case/app"
 	"github.com/stretchr/testify/assert"
 )
 

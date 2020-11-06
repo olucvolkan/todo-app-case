@@ -31,6 +31,7 @@ func New() *Config {
 
 // DBUrl returns connection string for DB connection
 func (c *Config) DBUrl() string {
+
 	return fmt.Sprintf(
 		"%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local",
 		c.DBUser,

@@ -3,7 +3,6 @@ package main
 import (
 	"database/sql"
 	"fmt"
-
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
 	"github.com/olucvolkan/todo-app-case/api/config"
@@ -39,6 +38,7 @@ func main() {
 
 	ensureDBExists(config)
 
+	fmt.Println(config.DBUrl())
 	gormDB, err := gorm.Open("mysql", config.DBUrl())
 	if err != nil {
 		fmt.Println(fmt.Errorf("Can't connect to database, err: %v", err))
@@ -66,8 +66,6 @@ func main() {
 func ensureDBExists(config *config.Config) {
 	db, err := sql.Open("mysql", config.DBUrlWithoutDBName())
 
-	fmt.Println(1)
-
 	if err != nil {
 		fmt.Println("can't connect database for creating table")
 		return
@@ -76,7 +74,6 @@ func ensureDBExists(config *config.Config) {
 	defer db.Close()
 	db.Exec("CREATE DATABASE IF NOT EXISTS " + config.DBName + ";")
 	if err != nil {
-		fmt.Println(5)
 		fmt.Println(err.Error())
 	} else {
 		fmt.Println("Successfully created database or updated")

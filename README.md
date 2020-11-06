@@ -64,5 +64,5 @@ $ docker-compose up --build
 
 ### `Deployment`
 
-Deployment has been done to [heroku](https://todo-app-case.herokuapp.com/swagger/index.html).
+Deployment has been done to [heroku](https://aqueous-citadel-50556.herokuapp.com/swagger/index.html).
 

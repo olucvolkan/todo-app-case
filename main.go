@@ -72,7 +72,7 @@ func ensureDBExists(config *config.Config) {
 	}
 
 	defer db.Close()
-	db.Exec("CREATE DATABASE IF NOT EXISTS " + config.DBName + ";")
+	_, err = db.Exec("CREATE DATABASE IF NOT EXISTS " + config.DBName + ";")
 	if err != nil {
 		fmt.Println(err.Error())
 	} else {

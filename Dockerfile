@@ -40,4 +40,4 @@ COPY --from=builder /app/.env .
 EXPOSE 8080
 
 #Command to run the executable
-CMD ["./main"]
+CMD sleep 10 && ./main

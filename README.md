@@ -57,7 +57,8 @@ $ cd test && go test
 
 ### `Docker for local build`
 
-```sh
+```sh 
+$ docker build --tag full_todo_app .
 $ docker-compose up --build
 ```
 

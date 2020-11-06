@@ -39,8 +39,8 @@ To use this project, first clone the repo on your device using the command below
 
 ```sh
 $ cd todo-app-case
-$ go build cmd/api/main.go
-$ go run cmd/api/main.go
+$ go build main.go
+$ go run main.go
 ```
 Runs the app in the development mode.<br />
 You must edit the .env file according to your own information!
